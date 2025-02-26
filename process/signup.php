@@ -16,13 +16,13 @@ if (isset($_POST["btn"])) {
 
     
     if (empty($fullname) || empty($email) || empty($password) || empty($cpassword)) {
-        $_SESSION["error"] = "All fields are required!";
+        $_SESSION["error1"] = "All fields are required!";
         header("location: ../signup.php");
         exit;
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $_SESSION["error"] = "Invalid email format!";
+        $_SESSION["error4"] = "Invalid email format!";
         header("location: ../signup.php");
         exit;
     }
@@ -30,16 +30,16 @@ if (isset($_POST["btn"])) {
     $user = new User();
 
     if ($user->register($fullname, $email, $password)) {
-        $_SESSION["success"] = "You signed up successfully!";
+        $_SESSION["success"] = "Welcome $fullname, you signed up successfully!";
         header("location: ../index.php");
         exit;
     } else {
-        $_SESSION["error"] = "Error signing up user.";
+        $_SESSION["error2"] = "Error signing up user.";
         header("location: ../signup.php");
         exit;
     }
 } else {
-    $_SESSION["error"] = "Form not submitted correctly.";
+    $_SESSION["error3"] = "Form not submitted correctly.";
     header("location: ../signup.php");
     exit;
 }

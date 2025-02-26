@@ -13,11 +13,16 @@ if (isset($_POST["btn"])) {
         header("location: ../login.php");
         exit;
     }
-        $user = new User();
-        if ($user->login($email, $password)) {
-            $_SESSION["login_success"] = "You logged in successfully!";
-            header("location: ../index.php");
-            exit;
+
+    $user = new User();
+    $userData = $user->login($email, $password);
+
+    if ($userData) {
+        $_SESSION["user"] = $userData;
+        $_SESSION["login_success"] = "Welcome " . $userData['name'] . "!";
+        header("location: ../dashboard.php");
+        exit;
+
     }else{
         $_SESSION["errormsg"] = "Error signing up user.";
         header("location: ../login.php");

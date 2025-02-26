@@ -6,38 +6,16 @@ include 'partials/header.php';
 <div class="top-section">
       <div class="container">
       <?php
-     if (isset($_SESSION['success'])) {
-      echo "<div class='alert alert-success text-center'>" . $_SESSION['success'] . "</div>";
-      unset($_SESSION['success']); 
-      }
+             if (isset($_SESSION['login_success'])) {
+             echo "<div class='alert alert-success text-center'>" . $_SESSION['login_success'] . "</div>";
+             unset($_SESSION['login_success']); 
+            }
 
-     
 
-      if (isset($_SESSION['error1'])) {
-      echo "<div class='alert alert-danger text-center'>" . $_SESSION['error1'] . "</div>";
-      unset($_SESSION['error1']); 
-      }
-
-      if (isset($_SESSION['error2'])) {
-      echo "<div class='alert alert-danger text-center'>" . $_SESSION['error2'] . "</div>";
-      unset($_SESSION['error2']); 
-      }
-
-     if (isset($_SESSION['error3'])) {
-     echo "<div class='alert alert-danger text-center'>" . $_SESSION['error3'] . "</div>";
-     unset($_SESSION['error3']); 
-    }
-
-    if (isset($_SESSION['error4'])) {
-      echo "<div class='alert alert-danger text-center'>" . $_SESSION['error4'] . "</div>";
-      unset($_SESSION['error4']); 
-     }
-
-    //  if (!isset($_SESSION["user"])) {
-    //   header("location:login.php");
-    //   exit; }
-     
-?>
+            // if (isset($_SESSION["user"])) {
+            // echo "<p>Welcome, " . $_SESSION["user"]["name"] . "!</p>";
+            //  }
+             ?>
 
         <h1>Find your next Temporary home</h1>
         <p>Discover unique housing experiences around Lagos.</p>
@@ -144,7 +122,7 @@ include 'partials/header.php';
       </div>
     </div>
 
-    <!--Modal-->
+    <!--Modal part -->
     <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">

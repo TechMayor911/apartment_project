@@ -1,4 +1,19 @@
-<?php include 'partials/header.php'; ?>
+<?php
+session_start();
+
+// Debugging: Remove or comment out this block
+// echo "<pre>"; 
+// print_r($_SESSION);
+// echo "</pre>";
+
+// Redirect if user is not logged in
+if (!isset($_SESSION["user"])) {
+    header("location: login.php");
+    exit; // Ensure the script stops execution after redirection
+}
+
+include 'partials/header.php';
+?>
 <div class="listings-section">
       <div class="container">
         <h2>Our Apartments Listings</h2>

@@ -336,6 +336,100 @@ body {
     }
 
 
+    /* dashboard */
+    .dashboard-container {
+      display: flex;
+      margin-top: 80px; /* Adjust for fixed navbar */
+    }
 
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #2c3e50; /* Dark blue color */
+      color: white;
+      padding: 20px;
+    }
 
+    .sidebar h3 {
+      margin-bottom: 30px; /* Increased margin for spacing */
+      color: #fff; /* White text for the heading */
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px; /* Increased margin for spacing */
+    }
+
+    .sidebar ul li a {
+      color: #bdc3c7; /* Light gray text for links */
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar ul li a i {
+      margin-right: 10px;
+    }
+
+    .sidebar ul li a:hover {
+      color: #ff385c; /* Red color on hover */
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 30px; /* Increased padding for spacing */
+      background: #ecf0f1; /* Light gray background */
+    }
+
+    .main-content .header {
+      margin-bottom: 30px; /* Increased margin for spacing */
+    }
+
+    .main-content .header h2 {
+      margin-bottom: 20px; /* Increased margin for spacing */
+      color: #333; /* Dark text for readability */
+    }
+
+    .dashboard-section {
+      margin-bottom: 40px; /* Increased margin for spacing */
+      background: #fff; /* White background for sections */
+      padding: 25px; /* Increased padding for spacing */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-info p {
+      font-size: 1.1rem;
+      color: #333; /* Dark text for readability */
+      margin-bottom: 15px; /* Added margin for spacing */
+    }
+
+    .bookings-list .booking-item {
+      background: #f8f9fa;
+      padding: 20px; /* Increased padding for spacing */
+      border-radius: 10px;
+      margin-bottom: 20px; /* Increased margin for spacing */
+    }
+
+    .bookings-list .booking-item p {
+      margin: 0 0 10px 0; /* Added margin for spacing */
+      color: #333; /* Dark text for readability */
+    }
+
+    .form-group {
+      margin-bottom: 20px; /* Increased margin for spacing */
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: #333; /* Dark text for readability */
+      margin-bottom: 10px; /* Added margin for spacing */
+      display: block; /* Ensure labels are on their own line */
+    }
   </style>
