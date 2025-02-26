@@ -1,6 +1,18 @@
-<?php include 'partials/header.php'; ?>
+<?php
+session_start();
+include 'partials/header.php'; ?>
 <div class="signin-section">
       <div class="container">
+        <?php
+      if (isset($_SESSION['error'])) {
+     echo "<div class='alert alert-danger text-center'>" . $_SESSION['error'] . "</div>";
+     unset($_SESSION['error']);   
+      }
+
+    if (isset($_SESSION['errormsg'])) {
+      echo "<div class='alert alert-danger text-center'>" . $_SESSION['errormsg'] . "</div>";
+      unset($_SESSION['errormsg']); }
+?>
         <div class="signin-card">
           <h2>Login</h2>
           <form method="post" action="process/login.php">

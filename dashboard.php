@@ -4,8 +4,10 @@ include 'partials/header.php';
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
     exit();
+   
 }
 ?>
+<?php  $user = $_SESSION['user'];  ?>
   <div class="dashboard-container">
     <div class="sidebar">
       <h3>Dashboard</h3>
@@ -19,6 +21,11 @@ if (!isset($_SESSION['user'])) {
     </div>
 
     <div class="main-content">
+      <?php
+    // echo "<pre>";
+    // print_r($_SESSION);
+    // echo "</pre>";
+    ?>
       <div class="header">
         <h4>  <?php
              if (isset($_SESSION['login_success'])) {
@@ -61,9 +68,8 @@ if (!isset($_SESSION['user'])) {
       <div class="dashboard-section">
         <h3>Profile</h3>
         <div class="profile-info">
-          <p><strong>Name:</strong> Wariola Mayorr</p>
-          <p><strong>Email:</strong> wariolamayowa@gmail.com</p>
-          <p><strong>Phone:</strong> +234 90 1481 7216</p>
+          <p><strong>Name:</strong> <?php echo  $user['name']?></p>
+          <p><strong>Email:</strong> <?php echo $user['email']?></p>
         </div>
       </div>
 

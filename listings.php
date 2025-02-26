@@ -1,18 +1,17 @@
 <?php
 session_start();
+  include "header.php";
 
-// Debugging: Remove or comment out this block
-// echo "<pre>"; 
-// print_r($_SESSION);
-// echo "</pre>";
-
-// Redirect if user is not logged in
-if (!isset($_SESSION["user"])) {
-    header("location: login.php");
-    exit; // Ensure the script stops execution after redirection
+if (!isset($_SESSION['user'])) {
+    $_SESSION['error'] = 'You must be logged in to see listings';
+    header("Location: login.php");
+    exit(); // Ensure no further code is executed after the redirect
 }
 
-include 'partials/header.php';
+
+
+
+
 ?>
 <div class="listings-section">
       <div class="container">

@@ -24,7 +24,7 @@ if (isset($_POST["btn"])) {
         exit;
 
     }else{
-        $_SESSION["errormsg"] = "Error signing up user.";
+        $_SESSION["errormsg"] = "User not found.";
         header("location: ../login.php");
         exit;
     }

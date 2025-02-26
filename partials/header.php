@@ -21,10 +21,14 @@
         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="listings.php">Listings</a></li>
         <?php if (isset($_SESSION['user'])): ?>
+                   <li class="nav-item">
+                        <a class="nav-link" href="dashboard.php">Dashboard</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Log Out</a>
                     </li>
-                <?php else: ?>                  
+                <?php else: ?>             
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
                 <?php endif; ?>
