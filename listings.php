@@ -1,17 +1,13 @@
 <?php
 session_start();
-  include "header.php";
+  
 
 if (!isset($_SESSION['user'])) {
-    $_SESSION['error'] = 'You must be logged in to see listings';
+  $_SESSION['error'] = 'You must be logged in to see listings';
     header("Location: login.php");
-    exit(); // Ensure no further code is executed after the redirect
+    exit();
 }
-
-
-
-
-
+  include "partials/header.php";
 ?>
 <div class="listings-section">
       <div class="container">

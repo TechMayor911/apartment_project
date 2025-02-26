@@ -34,7 +34,7 @@ if (isset($_POST["btn"])) {
         header("location: ../index.php");
         exit;
     } else {
-        $_SESSION["error2"] = "Error signing up user.";
+        $_SESSION["error2"] = "User already has an account.";
         header("location: ../signup.php");
         exit;
     }

@@ -19,6 +19,10 @@ include 'partials/header.php';
         echo "<div class='alert alert-danger text-center'>" . $_SESSION['error3'] . "</div>";
         unset($_SESSION['error3']); 
        }
+       if (isset($_SESSION['error2'])) {
+        echo "<div class='alert alert-danger text-center'>" . $_SESSION['error2'] . "</div>";
+        unset($_SESSION['error2']); 
+       }
       ?>
         <div class="signup-card">
           <h2>Sign Up</h2>
